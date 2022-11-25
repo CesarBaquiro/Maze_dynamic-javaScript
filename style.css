@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-form {
+    width: 100%;
+    top: 400px;
+    width: calc(100% - 200px);
+
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 9px;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+}
+
+#form-sizes {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h2 {
+    color: white;
+}
