@@ -2,8 +2,8 @@
  *Realizado con base en las instrucciones de Maze Generator en wikipedia
  */
 
-let width = 10; //Ancho del laberinto
-let height = 10; //Altura del laberinto
+let width = 5; //Ancho del laberinto
+let height = 5; //Altura del laberinto
 let zoom = 60; //Tamano de las celdas
 
 // let num = prompt("Ingrese un numero");
@@ -13,14 +13,14 @@ let zoom = 60; //Tamano de las celdas
 let canvas = document.createElement("canvas");
 canvas.setAttribute("width", width * zoom); //Ancho del laberinto
 canvas.setAttribute("height", height * zoom); //Alto del laberinto
-canvas.style.border = "1px dashed black";
+canvas.style.border = "1px dashed white";
 document.body.appendChild(canvas);
 let ctx = canvas.getContext("2d");
 
 /*-----------------Funcion para pintar lineas en el canvas------------------ */
 function paintLine(x1, y1, x2, y2) {
-    ctx.strokeStyle = "black";
-    ctx.lineWidth = 1;
+    ctx.strokeStyle = "white";
+    ctx.lineWidth = 3;
     ctx.beginPath();
     ctx.moveTo(x1, y1);
     ctx.lineTo(x2, y2);
@@ -30,13 +30,6 @@ function paintLine(x1, y1, x2, y2) {
 let c = zoom; // c = Cell
 let columns = canvas.width / c;
 let rows = canvas.height / c;
-
-function index(x, y) {
-    if (x < 0 || y < 0 || x > columns - 1 || y > rows - 1) {
-        return -1;
-    }
-    return x * rows + y;
-}
 
 function index(x, y) {
     if (x < 0 || y < 0 || x > columns - 1 || y > rows - 1) {
